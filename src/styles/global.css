@@ -1,0 +1,29 @@
+html, body {
+  font-family: 'Montserrat Variable', sans-serif;
+  background-color: rgb(238, 238, 238);
+  color: rgb(32, 32, 34);
+}
+
+.profilePicture {
+  border-radius: 50%;
+}
+
+.navItem {
+  color: #7C828C;
+}
+
+.navItem:hover {
+  border-bottom: 3px solid black;
+  padding-bottom: 4px;
+  color: black;
+}
+
+.active {
+  border-bottom: 3px solid black;
+  padding-bottom: 4px;
+  color: black;
+}
+
+.tagHover:hover {
+  border: black solid 2px;
+}

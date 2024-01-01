@@ -1,0 +1,20 @@
+---
+import Head from './Head.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+
+const { PageName, TabTitle, MetaTitle, MetaDescription, MetaTag, MetaUrl } = Astro.props
+---
+
+<html lang="en">
+  <Head {TabTitle} {MetaTitle} {MetaDescription} {MetaTag} {MetaUrl} />
+  <body>
+    <div class="flex flex-col container mx-auto max-w-2xl h-screen px-7">
+      <Nav {PageName} />
+      <div class="flex-grow">
+        <slot />
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

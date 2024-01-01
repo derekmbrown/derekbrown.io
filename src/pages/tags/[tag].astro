@@ -1,0 +1,47 @@
+---
+import Main from '../../layouts/Main.astro'
+import { Icon } from 'astro-icon'
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../posts/*.md')
+  const allTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())]
+  
+  return allTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag))
+    return { params: { tag }, props: { posts: filteredPosts }}
+  })
+}
+
+const { tag } = Astro.params
+const { posts } = Astro.props
+const filteredPosts = posts.filter((post) => post.frontmatter.tags?.includes(tag))
+const postFoundMessage = filteredPosts.length + ' ' + (filteredPosts.length > 1 ? 'posts' : 'post') + ' found.'
+const title = `Tag: ${tag}`
+---
+
+<Main 
+  PageName="Tag"
+  TabTitle={title},
+  MetaTitle="Derek Brown", 
+  MetaDescription="Developer profile, portfolio and blog of Derek Brown.", 
+  MetaTag="website", 
+  MetaUrl="https://derekbrown.io"
+>
+  <div class="text-3xl mb-1">
+    <span class="font-light">Tag: </span> <span class="font-bold">{tag}</span>
+  </div>
+  <div class="mb-5">{postFoundMessage}</div>
+  {filteredPosts.map((post) =>
+    <a href={post.url}>
+      <div class="flex flex-col mb-10 drop-shadow-xl bg-[#F3F3F3] p-6">
+        <div class="text-3xl font-extrabold mb-3">
+          {post.frontmatter.title}
+        </div>
+        <div class="text-sm font-semibold flex items-center">
+          <Icon name="mdi:calendar-month" class="mr-2" width="25" height="25"/> 
+          {new Date(post.frontmatter.pubDate).toLocaleString('en-us', { month: 'long', day: '2-digit', year: 'numeric' })}
+        </div>
+      </div>
+    </a>
+  )}
+</Main>

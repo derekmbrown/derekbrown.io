@@ -1,0 +1,52 @@
+---
+import Main from '../layouts/Main.astro'
+import Emoji from 'astro-emoji'
+---
+
+<Main 
+  PageName="About"
+  TabTitle="About",
+  MetaTitle="Derek Brown", 
+  MetaDescription="Developer profile, portfolio and blog of Derek Brown.", 
+  MetaTag="website", 
+  MetaUrl="https://derekbrown.io"
+>
+  <div class="flex text-5xl font-black mb-7">About</div>
+  
+  <!-- About Section -->
+  <section class="mb-7">
+    <div class="text-lg mb-3">
+      Hello, I'm Derek Brown - a Senior Software Engineer. Welcome to my spot on the internet.
+    </div>
+    <div class="text-lg mb-3">
+      I primarily focus on backend development and devops. I enjoy building and automating things in the cloud. Some of my favorite technologies are Serverless computing, Infrastructure as Code and Containerization.
+    </div>
+    <div class="text-lg mb-3">
+      In my spare time I like to create software, build mechanical keyboards, talk everything Apple Inc, play disc golf  and game on PC.
+    </div>
+    <div class="text-lg mb-5">
+      I made this site to share things on my learnings and my hobbies. Use the <a href="/tags" class="text-blue-600 hover:underline">tags</a> to search for posts that may interest you. The <a href="https://github.com/derekmbrown/derekbrown.io" class="text-blue-600 hover:underline" target="blank">source</a> is available to browse on my <a href="https://github.com/derekmbrown" class="text-blue-600 hover:underline" target="blank">GitHub</a>.
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="mb-7">
+    <div class="text-xl font-bold mb-3">Contact</div>
+    <div class="text-lg">
+      I can be reached by <a class="text-blue-600 hover:underline" href="mailto:dmbrown710@gmail.com" target="blank">email</a> or on <a class="text-blue-600 hover:underline" href="https://www.linkedin.com/in/brownderekm" target="blank">LinkedIn</a>. Also, feel free to checkout my <a href="https://github.com/derekmbrown" class="text-blue-600 hover:underline" target="blank">GitHub</a> and subscribe to my <a href="/rss.xml" class="text-blue-600 hover:underline" target="blank">RSS</a> feed.
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="mb-7">
+    <div class="text-xl font-bold mb-3">Certifications</div>
+    <table class="table-auto text-lg container">
+      <tbody>
+        <tr>
+          <td class="text-left">AWS Certified Solutions Architect - Associate</td>
+          <td class="text-right"><a href="https://www.credly.com/badges/fca4a464-2e57-4895-9cfa-bfecf2723b52/linked_in_profile" class="text-blue-600 hover:underline" target="_blank">April 2020</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</Main>

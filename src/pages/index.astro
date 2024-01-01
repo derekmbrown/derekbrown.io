@@ -1,0 +1,33 @@
+---
+import Main from '../layouts/Main.astro'
+import { Icon } from 'astro-icon'
+
+const allPosts = await Astro.glob('./posts/*.md')
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate))
+---
+
+<Main 
+  PageName="Home"
+  TabTitle="Home",
+  MetaTitle="Derek Brown", 
+  MetaDescription="Developer profile, portfolio and blog of Derek Brown.", 
+  MetaTag="website", 
+  MetaUrl="https://derekbrown.io"
+>
+  <div class="flex text-5xl font-black mb-7">Latest</div>
+
+  {allPosts.map((post) =>
+    <a href={post.url}>
+      <div class="flex flex-col mb-10 drop-shadow-xl bg-[#F3F3F3] p-6">
+        <div class="text-3xl font-extrabold mb-3">
+          {post.frontmatter.title}
+        </div>
+        <div class="text-sm font-semibold flex items-center">
+          <Icon name="mdi:calendar-month" class="mr-2" width="25" height="25"/> 
+          {new Date(post.frontmatter.pubDate).toLocaleString('en-us', { month: 'long', day: '2-digit', year: 'numeric' })}
+        </div>
+      </div>
+    </a>
+  )}
+
+</Main>

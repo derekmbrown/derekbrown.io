@@ -1,0 +1,34 @@
+---
+import Emoji from 'astro-emoji'
+
+const { PageName } = Astro.props
+---
+
+<nav class="flex flex-col">
+  <div class="text-3xl font-black pt-10"><a href="/">Derek Brown <Emoji symbol="👨🏻‍💻" label="person" /></a></div>
+  <div class="text-md md:text-lg font-medium mt-2">Software Engineer · Disc Golfer</div>
+  <div class="text-lg md:text-xl font-semibold mt-2 mb-10">
+    <span class="navItem mr-5" id="posts"><a href="/">Posts</a></span>
+    <span class="navItem mr-5" id="tags"><a href="/tags">Tags</a></span>
+    <span class="navItem mr-5" id="about"><a href="/about">About</a></span>
+    <span class="navItem "><a href="/rss.xml" target="_blank">RSS</a></span>
+  </div>
+</nav>
+
+<script define:vars={{ PageName }}>
+
+  switch (PageName) {
+    case 'Home':
+    case 'Post':
+      document.getElementById('posts').classList.add('active')
+      break;
+    case 'Tags':
+    case 'Tag':
+      document.getElementById('tags').classList.add('active')
+      break;
+    case 'About':
+      document.getElementById('about').classList.add('active')
+      break;
+  }
+
+</script>
