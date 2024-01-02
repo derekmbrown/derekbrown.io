@@ -39,16 +39,16 @@ tags.sort()
   MetaUrl={url}
 >
   <div class="flex flex-col mb-8">
-    <div class="text-sm mb-6">
+    <div class="text-4xl md:text-5xl font-extrabold mb-5">{title}</div>
+    <div class="text-sm font-semibold flex items-center mb-5">
+      <Icon name="mdi:calendar-month" class="mr-2" width="25" height="25"/> {new Date(pubDate).toLocaleString('en-us', { month: 'long', day: '2-digit', year: 'numeric' })}
+    </div>
+    <div class="text-sm">
       {tags.map(tag => (
         <a href={`/tags/${tag}`} class="font-semibold bg-gray-300 mr-3 mb-3 py-1 px-2 border-gray-300 border-2 tagHover">
           {tag}
         </a>
       ))}
-    </div>
-    <div class="text-4xl md:text-5xl font-extrabold mb-5">{title}</div>
-    <div class="text-sm font-semibold flex items-center">
-      <Icon name="mdi:calendar-month" class="mr-2" width="25" height="25"/> {new Date(pubDate).toLocaleString('en-us', { month: 'long', day: '2-digit', year: 'numeric' })}
     </div>
   </div>
   <div class="content flex flex-col gap-4 mb-10 text-lg">
