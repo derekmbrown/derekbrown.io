@@ -1,0 +1,37 @@
+---
+import Main from '../../layouts/Main.astro'
+
+export async function getStaticPaths() {
+  const allNotes = await Astro.glob('../notes/*.md')
+  const allTags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())]
+  
+  return allTags.map((tag) => {
+    const filteredNotes = allNotes.filter((note) => note.frontmatter.tags.includes(tag))
+    return { params: { tag }, props: { notes: filteredNotes }}
+  })
+}
+
+const { tag } = Astro.params
+const { notes } = Astro.props
+const filteredNotes = notes.filter((note) => note.frontmatter.tags?.includes(tag))
+const title = `Tag: ${tag}`
+---
+
+<Main 
+  PageName="Tag"
+  TabTitle={title},
+  MetaTitle="Derek Brown", 
+  MetaDescription="Developer profile, portfolio and website of Derek Brown.", 
+  MetaTag="website", 
+  MetaUrl="https://derekbrown.io"
+>
+  <div class="mb-4">Tag: {tag} ({filteredNotes.length})</div>
+  {filteredNotes.map((note) =>
+    <div class="flex flex-col justify-between md:flex-row">
+      <div><a href={note.url}>{note.frontmatter.title}</a></div>
+      <div class="text-[#ABABAB] mr-3">
+        {new Date(note.frontmatter.pubDate).toDateString().slice(4, 15)}
+      </div>
+    </div>
+  )}
+</Main>

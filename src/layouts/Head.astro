@@ -1,0 +1,33 @@
+---
+import '../styles/global.css'
+import '@fontsource-variable/inter'
+import '@fontsource-variable/manrope'
+import '@fontsource-variable/montserrat'
+import '@fontsource/fira-code'
+import '@fontsource/merriweather'
+
+const {TabTitle, MetaTitle, MetaDescription, MetaTag, MetaUrl} = Astro.props
+const tab = TabTitle != 'Home' ? TabTitle + ' · Derek Brown' : 'Derek Brown'
+---
+
+<head>
+  <title>{tab}</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="description" content={MetaDescription} />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@derekmbrown" />
+  <meta name="twitter:title" content={MetaTitle} />
+  <meta name="twitter:description" content={MetaDescription} />
+
+  <meta property="og:url" content={MetaUrl} />
+  <meta property="og:title" content={MetaTitle} />
+  <meta property="og:description" content={MetaDescription} />
+  <meta property="og:site_name"  content="" />
+  <meta property="og:type" content={MetaTag} />
+  <meta property="og:locale" content="en_US" />
+</head>

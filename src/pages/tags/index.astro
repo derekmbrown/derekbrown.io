@@ -1,0 +1,24 @@
+---
+import Main from '../../layouts/Main.astro'
+
+const allNotes = await Astro.glob('./../notes/*.md')
+const tags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())]
+tags.sort()
+---
+
+<Main 
+  PageName="Tags"
+  TabTitle="Tags",
+  MetaTitle="Derek Brown", 
+  MetaDescription="Developer profile, portfolio and website of Derek Brown.", 
+  MetaTag="website", 
+  MetaUrl="https://derekbrown.io"
+>
+  <div class="flex flex-wrap">
+    {tags.map(tag => (
+      <a href={`/tags/${tag}`} class="text-blue-400 hover:underline mr-2">
+        {tag}
+      </a>
+    ))}
+  </div>
+</Main>

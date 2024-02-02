@@ -1,0 +1,16 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<footer class="flex flex-col items-center px-2 pt-5 pb-10">
+  <div class="flex mb-4">
+    <a href="mailto:dmbrown710@gmail.com" class="mr-2" target="_blank"><Icon name="mdi:email" width="30" height="30"/></a>
+    <a href="https://www.linkedin.com/in/brownderekm" class="mr-2" target="_blank"><Icon name="mdi:linkedin" width="30" height="30"/></a>
+    <a href="https://github.com/derekmbrown" class="mr-2" target="_blank"><Icon name="mdi:github" width="30" height="30"/></a>
+  </div>
+  <div>Made by Derek Brown &copy; <span id="copyright"></span></div>
+</footer> 
+
+<script>
+  document.querySelector("#copyright").textContent = new Date().getFullYear().toString()
+</script>

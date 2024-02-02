@@ -1,0 +1,58 @@
+---
+import Main from './Main.astro'
+import { Icon } from 'astro-icon'
+
+const { frontmatter } = Astro.props
+const { title, pubDate, tags, dek, url } = frontmatter
+
+tags.sort()
+---
+
+<style is:global>
+  #title { 
+    @apply font-bold text-xl
+  }
+
+  li {
+    @apply list-disc list-inside
+  }
+
+  .content a {
+    @apply text-blue-600 hover:underline
+  }
+
+  .astro-code {
+    @apply p-6 text-sm
+  }
+
+  .content h2 {
+    @apply text-2xl font-bold pt-4
+  }
+</style>
+
+<Main 
+  PageName="Note"
+  TabTitle={title},
+  MetaTitle={title}, 
+  MetaDescription={dek}, 
+  MetaTag="article",
+  MetaUrl={url}
+>
+  <div class="flex flex-col mb-8">
+    <span class="font-['Merriweather'] text-4xl mb-2">{title}</span>
+    <div class="text-[#ABABAB] flex">
+      <span class="text-[#ABABAB]">
+        {new Date(pubDate).toDateString().slice(4, 15)}
+      </span>
+      <Icon name="mdi:circle-small" width="25" height="25"/>
+      {tags.map(tag => (
+        <a href={`/tags/${tag}`} class="text-blue-400 hover:underline mr-2">
+          {tag}
+        </a>
+      ))}
+    </div>
+  </div>
+  <div class="content flex flex-col gap-4 mb-10">
+    <slot />
+  </div>
+</Main>
