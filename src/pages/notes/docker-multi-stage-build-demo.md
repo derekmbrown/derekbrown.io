@@ -2,7 +2,7 @@
 layout: '../../layouts/Note.astro'
 title: 'Docker Multi-Stage Build Demo'
 pubDate: 02-24-2024
-tags: ['docker', 'demo']
+tags: ['docker', 'demo', 'note']
 ---
 
 Multi-stage builds are a way to optimize images that reduce image sizes, decrease build times and improve readability of Dockerfiles.

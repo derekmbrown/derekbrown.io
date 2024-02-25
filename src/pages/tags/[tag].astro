@@ -27,7 +27,7 @@ const title = `Tag: ${tag}`
 >
   <div class="mb-4">Tag: {tag} ({filteredNotes.length})</div>
   {filteredNotes.map((note) =>
-    <div class="flex flex-col justify-between md:flex-row">
+    <div class="flex flex-col justify-between md:flex-row mb-1">
       <div><a href={note.url}>{note.frontmatter.title}</a></div>
       <div class="text-[#ABABAB] mr-3">
         {new Date(note.frontmatter.pubDate).toDateString().slice(4, 15)}
