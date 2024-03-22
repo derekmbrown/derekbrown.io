@@ -1,13 +1,11 @@
 ---
 layout: '../../layouts/Note.astro'
-title: 'Docker Multi-Stage Build Example'
+title: 'Docker Multi-Stage Build'
 pubDate: 02-24-2024
-tags: ['docker', 'example', 'note']
+tags: ['docker', 'code snippet', 'note']
 ---
 
-Multi-stage builds are a way to optimize images to reduce image sizes, decrease build times and improve readability of Dockerfiles.
-
-Here is a basic example how it works:
+Here's an example how to setup a multi-stage build in Docker.
 
 ```docker
 # 1. Build Composer stage with 'builder' alias
