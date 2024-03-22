@@ -1,17 +1,14 @@
 ---
 import Emoji from 'astro-emoji'
-import { Icon } from 'astro-icon'
 
 const { PageName } = Astro.props
 ---
 
 <nav class="flex flex-col mt-10 mb-10">
   <div class="font-['Merriweather'] text-3xl font-black"><a href="/">Derek Brown <Emoji symbol="👨🏻‍💻" label="person" /></a></div>
-  <div class="font-['Merriweather'] text-lg flex items-center">
+  <div class="font-['Merriweather'] text-lg flex items-center gap-3">
     <span class="navItem" id="notes"><a href="/">Notes</a></span>
-    <Icon name="mdi:slash-forward" width="20" height="20"/>
     <span class="navItem" id="tags"><a href="/tags">Tags</a></span>
-    <Icon name="mdi:slash-forward" width="20" height="20"/>
     <span class="navItem" id="about"><a href="/about">About</a></span>
   </div>
 </nav>
