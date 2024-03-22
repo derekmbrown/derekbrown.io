@@ -14,9 +14,9 @@ tags.sort()
   MetaTag="website", 
   MetaUrl="https://derekbrown.io"
 >
-  <div class="flex flex-wrap font-medium">
+  <div class="flex flex-wrap">
     {tags.map(tag => (
-      <a href={`/tags/${tag}`} class="mr-3 border-2 rounded-md px-2 py-1 border-black font-medium">
+      <a href={`/tags/${tag}`} class="text-blue-600 hover:underline mr-2">
         {tag}
       </a>
     ))}
