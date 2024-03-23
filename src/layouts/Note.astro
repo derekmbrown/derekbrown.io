@@ -51,7 +51,8 @@ tags.sort()
     <span class="md:text-5xl text-4xl mb-4 font-bold">{title}</span>
     <div class="flex flex-wrap">
       <span class="text-[#7E8C9A] text-lg">
-        {new Date(pubDate).toDateString().slice(4, 15)}
+        {new Date(pubDate).toLocaleString( 'default', { month: 'long', day: '2-digit', year: 'numeric' })
+          .replace(',', '')}
       </span>
     </div>
   </div>
