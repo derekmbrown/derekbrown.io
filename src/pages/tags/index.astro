@@ -16,9 +16,11 @@ tags.sort()
 >
   <div class="flex flex-wrap">
     {tags.map(tag => (
-      <a href={`/tags/${tag}`} class="text-blue-600 hover:underline mr-2">
-        {tag}
-      </a>
+      <div class="bg-[#1E262F] px-4 py-3 mr-3 rounded-lg text-lg">
+        <a href={`/tags/${tag}`} class="hover:underline">
+          {tag}
+        </a>
+      </div>
     ))}
   </div>
 </Main>

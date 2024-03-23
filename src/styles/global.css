@@ -1,7 +1,7 @@
 html, body {
   font-family: 'Inter Variable', sans-serif;
-  background-color: white;
-  color: #202022;
+  background-color: #0F141B;
+  color: #F2F5F7;
 }
 
 .navItem {
@@ -16,6 +16,5 @@ html, body {
 }
 
 .active {
-  color: #202022;
   border-bottom: 2px solid;
 }

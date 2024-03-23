@@ -39,20 +39,23 @@ tags.sort()
   MetaUrl={url}
 >
   <div class="flex flex-col mb-8">
-    <span class="font-['Merriweather'] text-4xl mb-2">{title}</span>
+    <div class="flex mb-5">
+      {tags.map(tag => (
+        <div class="bg-[#1E262F] px-3 py-2 mr-3 rounded-lg text-sm">
+          <a href={`/tags/${tag}`} class="hover:underline">
+            {tag}
+          </a>
+        </div>
+        ))}
+    </div>
+    <span class="font-['Merriweather'] text-5xl mb-4">{title}</span>
     <div class="flex flex-wrap">
-      <span class="text-[#757575]">
+      <span class="text-[#7E8C9A] text-lg">
         {new Date(pubDate).toDateString().slice(4, 15)}
       </span>
-      <Icon name="mdi:circle-small" width="25" height="25"/>
-      {tags.map(tag => (
-        <a href={`/tags/${tag}`} class="text-blue-600 hover:underline mr-2">
-          {tag}
-        </a>
-      ))}
     </div>
   </div>
-  <div class="content flex flex-col gap-4 mb-10">
+  <div class="content flex flex-col gap-4 mb-10 text-lg">
     <slot />
   </div>
 </Main>
