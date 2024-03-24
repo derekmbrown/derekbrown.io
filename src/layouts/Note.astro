@@ -1,6 +1,5 @@
 ---
 import Main from './Main.astro'
-import { Icon } from 'astro-icon'
 
 const { frontmatter } = Astro.props
 const { title, pubDate, tags, dek, url } = frontmatter
@@ -9,24 +8,12 @@ tags.sort()
 ---
 
 <style is:global>
-  #title { 
-    @apply font-bold text-xl
-  }
-
-  li {
-    @apply list-disc list-inside
-  }
-
   .content a {
     @apply text-blue-600 hover:underline
   }
 
   .astro-code {
-    @apply p-6 text-sm
-  }
-
-  .content h2 {
-    @apply text-2xl font-bold pt-4
+    @apply p-6 text-base
   }
 </style>
 
@@ -48,7 +35,7 @@ tags.sort()
         </div>
         ))}
     </div>
-    <span class="md:text-5xl text-4xl mb-4 font-bold">{title}</span>
+    <span class="text-5xl mb-4 font-bold">{title}</span>
     <div class="flex flex-wrap">
       <span class="text-[#7E8C9A] text-lg">
         {new Date(pubDate).toLocaleString( 'default', { month: 'long', day: '2-digit', year: 'numeric' })
