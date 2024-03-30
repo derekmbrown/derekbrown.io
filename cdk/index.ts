@@ -38,7 +38,13 @@ export class PersonalSite extends Construct {
       blockPublicAccess: cdk.aws_s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       autoDeleteObjects: true,
-      objectOwnership: cdk.aws_s3.ObjectOwnership.OBJECT_WRITER
+      objectOwnership: cdk.aws_s3.ObjectOwnership.OBJECT_WRITER,
+      lifecycleRules: [{
+        transitions: [{
+          storageClass: cdk.aws_s3.StorageClass.DEEP_ARCHIVE,
+          transitionAfter: cdk.Duration.days(1)
+        }]
+      }]
     })
 
     // Root S3 Bucket
