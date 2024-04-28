@@ -14,5 +14,5 @@ ssh -J <bastion> <remote-host>
 If the hosts differ between users and ports, you can specify them like this.
 
 ```bash
-ssh -J user@<bastion:port> <user@remote-host:port>
+ssh -J user@<bastion:port> user@<remote-host:port>
 ```
