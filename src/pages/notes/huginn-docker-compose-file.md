@@ -9,10 +9,9 @@ Here's a Docker Compose file I'm using to setup a [Huginn](https://github.com/hu
 
 ```yml
 services:
-  # Huginn Service
-  # - Url: http://localhost:3000
-  # - Username: admin
-  # - Password: password
+  # Url: http://localhost:3000
+  # Username: admin
+  # Password: password
   web_service:
     container_name: web
     image: ghcr.io/huginn/huginn
@@ -33,11 +32,10 @@ services:
     depends_on:
       - db_service
 
-  # MySql Service
-  # - Host: localhost
-  # - Username: admin
-  # - Password: password
-  # - Port: 3001
+  # Host: localhost
+  # Username: admin
+  # Password: password
+  # Port: 3001
   db_service:
     container_name: db
     image: mysql:8.0
