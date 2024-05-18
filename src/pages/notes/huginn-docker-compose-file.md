@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/Note.astro'
 title: 'Huginn Docker Compose File'
-pubDate: 05-25-2024
+pubDate: 05-15-2024
 tags: ['docker', 'huginn', 'note']
 ---
 
