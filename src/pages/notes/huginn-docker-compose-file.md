@@ -2,7 +2,7 @@
 layout: '../../layouts/Note.astro'
 title: 'Huginn Docker Compose File'
 pubDate: 05-15-2024
-tags: ['docker', 'huginn', 'note']
+tags: ['note', 'docker', 'huginn']
 ---
 
 Here's a Docker Compose file I'm using to setup a [Huginn](https://github.com/huginn/huginn) service to monitor some news feeds.

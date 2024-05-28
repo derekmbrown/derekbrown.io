@@ -2,7 +2,7 @@
 layout: '../../layouts/Note.astro'
 title: 'Delete All Git History'
 pubDate: 03-29-2024
-tags: ['git', 'note']
+tags: ['note', 'git', 'cli']
 ---
 
 I recently had to delete all the git history in a repository but keep all the files. Here's one way to do it. 

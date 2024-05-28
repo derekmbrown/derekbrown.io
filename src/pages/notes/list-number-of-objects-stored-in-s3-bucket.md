@@ -1,0 +1,12 @@
+---
+layout: '../../layouts/Note.astro'
+title: 'List Number Of Objects Stored In S3 Bucket'
+pubDate: 05-28-2024
+tags: ['note', 'aws', 's3', 'cli']
+---
+
+Here's a command to list the number of objects in an S3 bucket using the AWS CLI.
+
+```bash
+aws s3 ls s3://<bucket-name>/ --recursive | wc -l 
+```

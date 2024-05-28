@@ -2,7 +2,7 @@
 layout: '../../layouts/Note.astro'
 title: 'Docker Multi-Stage Build'
 pubDate: 02-24-2024
-tags: ['docker', 'snippet', 'note']
+tags: ['note', 'docker', 'snippet']
 ---
 
 Here's an example how to setup a multi-stage build in Docker.
