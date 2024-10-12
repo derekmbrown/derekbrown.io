@@ -17,7 +17,13 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: 'us-east-1'
-    - run: make upload
+    - run: npm run build
+    - run: aws s3 sync ./dist s3://derekbrown.io
+    - run: |
+        aws cloudfront create-invalidation \
+        --distribution-id ${{ secrets.AWS_CLOUDFRONT_DIST_ID }} \
+        --paths '/*' \
+        --no-cli-pager
     - uses: lakuapik/gh-actions-http-status@v1
       with:
         sites: '["https://derekbrown.io", "https://www.derekbrown.io"]'
