@@ -1,0 +1,24 @@
+name: Pipeline
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  pipeline:
+    name: Pipeline
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - run: npm i
+    - run: npm run build
+    - uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["https://derekbrown.io", "https://www.derekbrown.io"]'
+        expected: '[200, 301]'
+    - uses: Ilshidur/action-discord@master
+      with:
+        args: 'https://derekbrown.io has been deployed.'
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.CODE_DEPLOY_BOT_DISCORD_WEBHOOK }}
