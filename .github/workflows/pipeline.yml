@@ -24,6 +24,7 @@ jobs:
         --distribution-id ${{ secrets.AWS_CLOUDFRONT_DIST_ID }} \
         --paths '/*' \
         --no-cli-pager
+    - run: sleep 30
     - uses: lakuapik/gh-actions-http-status@v1
       with:
         sites: '["https://derekbrown.io", "https://www.derekbrown.io"]'
