@@ -10,26 +10,44 @@ jobs:
     name: Pipeline
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
-    - run: npm i
-    - uses: aws-actions/configure-aws-credentials@v4
+    
+    - name: Checkout code
+      uses: actions/checkout@main
+
+    - name: Install node packages
+      run: npm i
+
+    - name: Authenicate AWS
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: 'us-east-1'
-    - run: npm run build
-    - run: aws s3 sync ./dist s3://derekbrown.io
-    - run: |
+
+    - name: Build website
+      run: npm run build
+
+    - name: Upload website
+      run: aws s3 sync ./dist s3://derekbrown.io
+
+    - name: Purge website
+      run: |
         aws cloudfront create-invalidation \
         --distribution-id ${{ secrets.AWS_CLOUDFRONT_DIST_ID }} \
         --paths '/*' \
         --no-cli-pager
-    - run: sleep 30
-    - uses: lakuapik/gh-actions-http-status@v1
+
+    - name: Wait 30 seconds
+      run: sleep 30
+
+    - name: Check Site Status
+      uses: lakuapik/gh-actions-http-status@v1
       with:
         sites: '["https://derekbrown.io", "https://www.derekbrown.io"]'
         expected: '[200, 301]'
-    - uses: Ilshidur/action-discord@master
+
+    - name: Send Discord Message
+      uses: Ilshidur/action-discord@master
       with:
         args: 'https://derekbrown.io has been deployed.'
       env:
