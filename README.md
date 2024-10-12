@@ -6,6 +6,9 @@ This repository contains my personal website.
 - Styled with Tailwind CSS.
 - Hosted in S3 fronted by CloudFront.
 - Infrastructure configured using AWS CDK in Typescript.
+- Deployment pipeline setup in GitHub Actions.
+
+![example workflow](https://github.com/derekmbrown/derekbrown.io/actions/workflows/pipeline.yml/badge.svg)
 
 Launch date: 02-01-2024.
 
