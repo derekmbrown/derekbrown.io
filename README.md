@@ -1,5 +1,5 @@
 ![Website Status Badge](https://img.shields.io/website?down_color=red&down_message=down&up_color=limegreen&up_message=up&url=https://derekbrown.io&label=website&logo=amazons3&logoColor=white)
-![Pipeline Badge](https://img.shields.io/github/actions/workflow/status/derekmbrown/derekbrown.io/pipeline.yml?logo=github&label=pipeline&logoColor=white)
+![Pipeline Badge](https://img.shields.io/github/actions/workflow/status/derekmbrown/derekbrown.io/pipeline.yml?logo=github&label=pipeline&logoColor=white&color=limegreen)
 
 # [https://derekbrown.io](https://derekbrown.io)
 
