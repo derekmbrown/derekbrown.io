@@ -1,3 +1,6 @@
+![Website Status Badge](https://img.shields.io/website?down_color=red&down_message=down&up_color=limegreen&up_message=up&url=https://derekbrown.io&label=website&logo=amazons3&logoColor=white)
+![Pipeline Badge](https://img.shields.io/github/actions/workflow/status/derekmbrown/derekbrown.io/pipeline.yml?logo=github&label=pipeline&logoColor=white)
+
 # [https://derekbrown.io](https://derekbrown.io)
 
 This repository contains my personal website.
@@ -7,8 +10,6 @@ This repository contains my personal website.
 - Hosted in S3 fronted by CloudFront.
 - Infrastructure configured using AWS CDK in Typescript.
 - Deployment pipeline setup in GitHub Actions.
-
-![example workflow](https://github.com/derekmbrown/derekbrown.io/actions/workflows/pipeline.yml/badge.svg)
 
 Launch date: 02-01-2024.
 
