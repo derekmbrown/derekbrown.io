@@ -2,7 +2,7 @@
 layout: '../../layouts/Note.astro'
 title: 'Add Full Path To Default Oh My Zsh Theme'
 pubDate: 04-17-2024
-tags: ['note', 'ohmyzsh']
+tags: ['note', 'terminal', 'ohmyzsh']
 ---
 
 I currently use the default Oh My Zsh theme for my terminal. It's configured by default to only display the current directory. I wanted to instead show the full path. Here's how to change that using vim.
