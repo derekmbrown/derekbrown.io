@@ -51,12 +51,16 @@ volumes:
 networks:
   huginn_network:
 
-# HUGINN LOGIN:
+# ---------------
+# Huginn Login:
+# ---------------
 # Url: localhost:3000
 # Username: admin
 # Password: password
 
-# DATABASE LOGIN:
+# ---------------
+# MySql Login:
+# ---------------
 # Host: localhost
 # Username: admin
 # Password: password
