@@ -62,7 +62,7 @@ networks:
 # MySql Login:
 # ---------------
 # Host: localhost
-# Username: admin
+# Username: root
 # Password: password
 # Port: 3001
 ```
