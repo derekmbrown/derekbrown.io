@@ -5,7 +5,7 @@ pubDate: 05-15-2024
 tags: ['note', 'docker', 'huginn']
 ---
 
-Here's a Docker Compose file I'm using to setup a [Huginn](https://github.com/huginn/huginn) service to monitor some news feeds.
+Here's a Docker Compose file I'm using to setup a [Huginn](https://github.com/huginn/huginn) service to monitor some news feeds. Login info is at the bottom.
 
 ```yml
 services:
