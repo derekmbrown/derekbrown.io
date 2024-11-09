@@ -11,7 +11,7 @@ export default defineConfig({
     syntaxHighlight: 'shiki',
     remarkPlugins: [ remarkHeadingId, remarkCodeTitles ],
     shikiConfig: {
-      theme: 'dark-plus',
+      theme: 'github-dark',
       wrap: true
     },
   },
