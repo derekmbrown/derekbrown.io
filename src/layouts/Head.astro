@@ -14,20 +14,22 @@ const tab = TabTitle != 'Home' ? TabTitle + ' · Derek Brown' : 'Derek Brown'
   <title>{tab}</title>
 
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={MetaDescription} />
-
+  
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@derekmbrown" />
   <meta name="twitter:title" content={MetaTitle} />
   <meta name="twitter:description" content={MetaDescription} />
-
+  
   <meta property="og:url" content={MetaUrl} />
   <meta property="og:title" content={MetaTitle} />
   <meta property="og:description" content={MetaDescription} />
   <meta property="og:site_name"  content="" />
   <meta property="og:type" content={MetaTag} />
   <meta property="og:locale" content="en_US" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨🏻‍💻</text></svg>"/>
 </head>
