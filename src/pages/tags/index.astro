@@ -1,8 +1,9 @@
 ---
 import Main from '../../layouts/Main.astro'
+import { getCollection } from 'astro:content'
 
-const allNotes = await Astro.glob('./../notes/*.md')
-const tags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())]
+const allNotes = await getCollection('notes')
+const tags = [...new Set(allNotes.map((note) => note.data.tags).flat())]
 tags.sort()
 ---
 

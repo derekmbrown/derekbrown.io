@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Docker Multi-Stage Build'
 pubDate: 02-24-2024
 tags: ['note', 'docker', 'snippet']

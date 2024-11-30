@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'My First Note'
 pubDate: 02-01-2024
 tags: ['note']

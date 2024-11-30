@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Send Raw String As Body Using HTTPie'
 pubDate: 10-29-2024
 tags: ['note', 'terminal', httpie]

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Delete All Git History'
 pubDate: 03-29-2024
 tags: ['note', 'git', 'cli']

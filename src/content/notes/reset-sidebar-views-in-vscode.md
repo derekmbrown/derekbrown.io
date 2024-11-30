@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Reset Sidebar Views In VS Code'
 pubDate: 08-14-2024
 tags: ['note', 'vscode']

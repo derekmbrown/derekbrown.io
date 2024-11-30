@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Huginn Docker Compose File'
 pubDate: 05-15-2024
 tags: ['note', 'docker', 'huginn']

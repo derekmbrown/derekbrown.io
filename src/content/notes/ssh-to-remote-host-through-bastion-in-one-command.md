@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'SSH To Remote Host Through Bastion In One Command'
 pubDate: 04-27-2024
 tags: ['note', 'ssh']

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Custom Shortcuts In VS Code'
 pubDate: 11-20-2024
 tags: ['note', 'vscode']

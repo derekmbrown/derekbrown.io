@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'Add Full Path To Default Oh My Zsh Theme'
 pubDate: 04-17-2024
 tags: ['note', 'terminal', 'ohmyzsh']

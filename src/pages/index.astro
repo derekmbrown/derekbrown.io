@@ -1,8 +1,9 @@
 ---
 import Main from '../layouts/Main.astro'
+import { getCollection } from 'astro:content'
 
-const allNotes = await Astro.glob('./notes/*.md')
-allNotes.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate))
+const allNotes = await getCollection('notes')
+allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
 ---
 
 <Main 
@@ -23,10 +24,10 @@ allNotes.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
   {allNotes.slice(0, 5).map((note) =>
     <div class="flex flex-col justify-between md:flex-row md:mb-3 mb-3 bg-[#1E262F] p-6 text-lg rounded-lg">
       <div class="mr-2">
-        <a href={note.url}>{note.frontmatter.title}</a>
+        <a href={`/notes/${note.slug}`}>{note.data.title}</a>
       </div>
       <div class="text-[#7E8C9A] shrink-0">
-        {new Date(note.frontmatter.pubDate).toDateString().slice(4, 15)}
+        {new Date(note.data.pubDate).toDateString().slice(4, 15)}
       </div>
     </div>
   )}

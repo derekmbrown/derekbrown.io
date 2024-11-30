@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Note.astro'
 title: 'List Number Of Objects Stored In S3 Bucket'
 pubDate: 05-28-2024
 tags: ['note', 'aws', 's3', 'cli']
