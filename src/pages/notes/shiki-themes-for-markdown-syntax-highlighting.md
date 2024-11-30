@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/Note.astro'
-title: 'Shiki Themes For Markdown Syntax Highlighting In Astro'
+title: 'Shiki Themes For Markdown Syntax Highlighting'
 pubDate: 11-10-2024
 tags: ['note', 'astro', 'markdown']
 ---
