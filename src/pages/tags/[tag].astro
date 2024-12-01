@@ -27,7 +27,7 @@ const title = `Tag: ${tag}`
   MetaTag="website", 
   MetaUrl="https://derekbrown.io"
 >
-  <div class="mb-6 text-xl">{filteredNotes.length} notes tagged with <span class="font-black">{tag}</span>:</div>
+  <div class="mb-6 text-xl">{filteredNotes.length} notes tagged with <span class="font-bold">{tag}</span>:</div>
   {filteredNotes.map((note) =>
     <div class="flex flex-col justify-between md:flex-row md:mb-3 mb-3 bg-[#1E262F] p-6 text-lg rounded-lg">
       <div><a href={`/notes/${note.slug}`}>{note.data.title}</a></div>

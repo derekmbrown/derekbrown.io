@@ -2,8 +2,21 @@
 import Main from '../../layouts/Main.astro'
 import { getCollection } from 'astro:content'
 
-const allNotes = await getCollection('notes')
-const tags = [...new Set(allNotes.map((note) => note.data.tags).flat())]
+const notes = await getCollection('notes')
+const tagsWithNotes = notes.reduce((allNotes, note) => {
+  const noteTags = note.data.tags
+  if (noteTags) {
+    noteTags.forEach((tag) => {
+      if (!allNotes[tag]) {
+        allNotes[tag] = []
+      }
+      allNotes[tag].push(note)
+    })
+  }
+  return allNotes
+}, {})
+
+const tags = [...new Set(notes.map((note) => note.data.tags).flat())]
 tags.sort()
 ---
 
@@ -17,11 +30,16 @@ tags.sort()
 >
   <div class="flex flex-wrap gap-y-3">
     {tags.map(tag => (
-      <div class="bg-[#1E262F] px-4 py-2 mr-3 rounded-lg text-lg">
-        <a href={`/tags/${tag}`}>
-          {tag}
-        </a>
-      </div>
+      <a href={`/tags/${tag}`}>
+        <div class="bg-[#1E262F] px-4 py-2 mr-3 rounded-lg text-lg flex">
+          <div>
+            {tag} |
+          </div>
+          <div class="ml-2">
+            {tagsWithNotes[tag].length}
+          </div>
+        </div>
+      </a>
     ))}
   </div>
 </Main>
