@@ -28,14 +28,14 @@ tags.sort()
   MetaTag="website", 
   MetaUrl="https://derekbrown.io"
 >
-  <div class="flex flex-wrap gap-y-3">
+  <div class="flex flex-wrap gap-y-5">
     {tags.map(tag => (
       <a href={`/tags/${tag}`}>
-        <div class="bg-[#1E262F] px-4 py-2 mr-3 rounded-lg text-lg flex">
-          <div>
-            {tag} |
+        <div class="bg-[#1E262F] rounded-lg mr-6 text-xl flex items-center">
+          <div class="px-5 py-2">
+            {tag}
           </div>
-          <div class="ml-2">
+          <div class="px-3 py-2 bg-[#adbccd] text-[#0F141B] rounded-lg font-semibold">
             {tagsWithNotes[tag].length}
           </div>
         </div>
