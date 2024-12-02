@@ -38,8 +38,9 @@ tags.sort()
     <span class="text-5xl mb-4 font-bold">{title}</span>
     <div class="flex flex-wrap">
       <span class="text-[#7E8C9A] text-lg">
-        {new Date(pubDate).toLocaleString( 'default', { month: 'long', day: '2-digit', year: 'numeric' })
-          .replace(',', '')}
+        Published: {new Date(pubDate).toLocaleString(
+          'default', { month: 'long', day: '2-digit', year: 'numeric' }
+        ).replace(',', '')}
       </span>
     </div>
   </div>
