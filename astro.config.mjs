@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config'
 import tailwind from "@astrojs/tailwind"
 import { remarkHeadingId } from 'remark-custom-heading-id'
-import remarkCodeTitles from "remark-code-titles";
+import remarkCodeTitles from 'remark-code-titles'
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [ tailwind() ],
+  integrations: [ tailwind(), sitemap()],
   site: 'https://derekbrown.io',
   markdown: {
     syntaxHighlight: 'shiki',
@@ -15,4 +16,5 @@ export default defineConfig({
       wrap: true
     },
   },
+  trailingSlash: 'never'
 });
