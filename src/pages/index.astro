@@ -16,9 +16,11 @@ allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
 >
   <div class="flex justify-between mb-6 items-center">
     <div class="md:text-4xl text-3xl font-bold">Latest Notes</div>
-    <div class="text-lg bg-[#1E262F] py-3 px-5 rounded-lg">
-      <a href="tags/note">View all</a>
-    </div>
+    <a href="tags/note">
+      <div class="text-lg bg-[#1E262F] py-3 px-5 rounded-lg">
+        View all
+      </div>
+    </a>
   </div>
 
   {allNotes.slice(0, 5).map((note) =>
