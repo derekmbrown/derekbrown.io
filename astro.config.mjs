@@ -6,15 +6,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [ 
-    tailwind(), 
-    sitemap(),
-    icon({
-      include: {
-        mdi: ["*"]
-      }
-    })
-  ],
+  integrations: [ tailwind(), sitemap() ],
   site: 'https://derekbrown.io',
   markdown: {
     syntaxHighlight: 'shiki',
