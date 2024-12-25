@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config'
-import tailwind from "@astrojs/tailwind"
+import tailwind from '@astrojs/tailwind'
 import { remarkHeadingId } from 'remark-custom-heading-id'
 import remarkCodeTitles from 'remark-code-titles'
 import sitemap from '@astrojs/sitemap'
