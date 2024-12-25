@@ -11,7 +11,7 @@ tags: ['note', 'astro', 'markdown']
 I currently used the `github-dark ` theme for all code blocks on this site.
 
 ```typescript
-// Example 'github-dark' theme
+// Example.ts
 let num = [1, 2, 3]
 num.forEach(function (value) {
   console.log(value)
