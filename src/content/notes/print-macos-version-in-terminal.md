@@ -1,7 +1,7 @@
 ---
 title: 'Print MacOS Version In Terminal'
 pubDate: 01-25-2025
-tags: ['note', 'macos', 'cli', 'apple', 'mac']
+tags: ['note', 'macos', 'terminal', 'apple', 'mac']
 ---
 
 A command to print your current MacOS version in the terminal.
