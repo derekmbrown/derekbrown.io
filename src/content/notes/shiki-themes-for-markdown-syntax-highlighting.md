@@ -8,7 +8,7 @@ tags: ['note', 'astro', 'markdown']
 
 [Here](https://shiki.style/themes) is a list of themes that work out-of-the-box!
 
-I currently used the `github-dark ` theme for all code blocks on this site.
+I currently use the `github-dark` theme for all code blocks on this site.
 
 ```typescript
 // Example.ts
