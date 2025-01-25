@@ -4,7 +4,7 @@ pubDate: 01-25-2025
 tags: ['note', 'macos', 'cli', 'apple', 'mac']
 ---
 
-A command to print the MacOS version in the terminal.
+A command to print your current MacOS version in the terminal.
 
 ```bash
 sw_vers
