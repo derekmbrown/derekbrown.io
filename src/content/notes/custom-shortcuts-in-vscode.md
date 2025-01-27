@@ -1,12 +1,14 @@
 ---
-title: 'Custom Shortcuts In VS Code'
+title: 'Custom Shortcuts In VSCode'
 pubDate: 11-20-2024
 tags: ['note', 'vscode']
 ---
 
-A list of my custom shortcuts in VS Code I use everyday.
+A running list of my custom shortcuts I use everyday. 
 
-```json
+To access this json file, open the Command Palette (`CMD+SHIFT+P`) and search for "Open Keyboard Shortcuts". A `keybindings.json` file should open.
+
+```json:keybindings.json
 [
   {
     "key": "shift+cmd+a",
