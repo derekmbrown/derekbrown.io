@@ -18,11 +18,12 @@
     "@fontsource-variable/montserrat": "^5.1.1",
     "@fontsource/fira-code": "^5.1.1",
     "@fontsource/merriweather": "^5.1.1",
+    "@iconify-json/mdi": "^1.2.3",
     "astro": "^5.1.10",
     "astro-emoji": "^1.2.0",
-    "astro-icon": "^0.8.1",
-    "astro-seo": "^0.8.0",
+    "astro-icon": "^1.1.5",
+    "astro-seo": "^0.8.4",
     "remark-code-titles": "^0.1.2",
-    "remark-custom-heading-id": "^1.0.1"
+    "remark-custom-heading-id": "^2.0.0"
   }
 }
