@@ -6,7 +6,7 @@ tags: ['note', 'vscode']
 
 A running list of my custom shortcuts in VSCode.
 
-To access this json file, open the Command Palette (`CMD+SHIFT+P`) and search for "Open Keyboard Shortcuts". A `keybindings.json` file should open.
+To access this json file, open the Command Palette (`CMD+SHIFT+P`) and search for "Open Keyboard Shortcuts (JSON)". A `keybindings.json` file should open.
 
 ```json:keybindings.json
 [
