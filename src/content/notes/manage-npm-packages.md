@@ -1,10 +1,10 @@
 ---
-title: 'Package To Manage NPM Packages'
+title: 'Manage NPM Packages'
 pubDate: 01-27-2025
 tags: ['note', 'npm']
 ---
 
-I use [this](https://www.npmjs.com/package/npm-check) package to manage npm packages: `npm-check`.
+I use `npm-check` to manage npm packages. [Here](https://www.npmjs.com/package/npm-check) are the docs.
 
 ```bash
 # Shows outdated packages
