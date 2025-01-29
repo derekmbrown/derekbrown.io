@@ -15,7 +15,7 @@ export async function GET(context) {
     items: notes.map((note) => ({
       title: note.data.title,
       pubDate: note.data.pubDate,
-      link: `/note/${note.slug}/`
+      link: `/note/${note.id}/`
     }))
   })
 }
