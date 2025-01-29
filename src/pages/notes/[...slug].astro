@@ -1,17 +1,18 @@
 ---
 import Note from '../../layouts/Note.astro'
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
+
 
 export async function getStaticPaths() {
   const allNotes = await getCollection('notes')
   allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
   return allNotes.map(note => ({
-    params: { slug: note.slug }, props: { note }
+    params: { slug: note.id }, props: { note }
   }))
 }
 
 const { note } = Astro.props
-const { Content } = await note.render()
+const { Content } = await render(note)
 ---
 
 <Note frontmatter={note.data}>
