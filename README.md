@@ -5,11 +5,11 @@
 
 This repository contains my personal website.
 
-- Built with [Astro](https://astro.build/).
-- Styled with [Tailwind CSS](https://v2.tailwindcss.com/).
+- Built with [Astro](https://docs.astro.build/en/getting-started/).
+- Styled with [Tailwind CSS](https://docs.astro.build/en/guides/integrations-guide/tailwind/).
 - Hosted in [S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html) fronted by [CloudFront](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started-cloudfront-overview.html).
-- Infrastructure configured using [AWS CDK in Typescript](https://docs.aws.amazon.com/cdk/api/v2/).
-- Deployment pipeline setup in [GitHub Actions](https://github.com/features/actions).
-- Icons from [Iconify](https://icon-sets.iconify.design/) and integrated with [Astro Icon](https://www.astroicon.dev/).
+- Infrastructure configured using [AWS CDK in Typescript](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html).
+- Deployment pipeline setup in [GitHub Actions](https://docs.github.com/en/actions).
+- Icons from [Iconify](https://icon-sets.iconify.design/) and integrated with [Astro Icon](https://www.astroicon.dev/getting-started/).
 
 Launch date: 02-01-2024.
