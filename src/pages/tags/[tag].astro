@@ -1,7 +1,7 @@
 ---
 import Main from '../../layouts/Main.astro'
 import { getCollection } from 'astro:content'
-import FeedItem from '../../components/FeedItem'
+import FeedItem from '../../components/ui/FeedItem'
 
 export async function getStaticPaths() {
   const allNotes = await getCollection('notes')

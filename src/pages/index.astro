@@ -1,7 +1,7 @@
 ---
 import Main from '../layouts/Main.astro'
 import { getCollection } from 'astro:content'
-import FeedItem from '../components/FeedItem'
+import FeedItem from '../components/ui/FeedItem'
 
 const allNotes = await getCollection('notes')
 allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
