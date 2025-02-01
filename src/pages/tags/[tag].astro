@@ -30,6 +30,6 @@ const title = `Tag: ${tag}`
 >
   <div class="mb-6 text-xl">{filteredNotes.length} notes tagged with <span class="font-bold">{tag}</span>:</div>
   {filteredNotes.map((note) =>
-    <NoteItem client:load note={note} />
+    <NoteItem note={note} />
   )}
 </Main>

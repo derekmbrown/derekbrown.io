@@ -1,8 +1,10 @@
 ---
 import Main from './Main.astro'
+import moment from 'moment'
 
 const { frontmatter } = Astro.props
 const { title, pubDate, tags, dek, url } = frontmatter
+const publishedDate = moment(pubDate).format('MMMM D YYYY')
 
 tags.sort()
 ---
@@ -42,9 +44,7 @@ tags.sort()
     <span class="text-5xl mb-4 font-bold">{title}</span>
     <div class="flex flex-wrap">
       <span class="text-[#7E8C9A] text-lg">
-        Published: {new Date(pubDate).toLocaleString(
-          'default', { month: 'long', day: '2-digit', year: 'numeric' }
-        ).replace(',', '')}
+        Published: {publishedDate}
       </span>
     </div>
   </div>

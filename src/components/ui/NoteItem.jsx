@@ -1,6 +1,8 @@
+import moment from 'moment'
+
 export default function NoteItem({ note }) {
   const title = note.data.title
-  const pubDate = new Date(note.data.pubDate).toDateString().slice(4, 15)
+  const pubDate = moment(note.data.pubDate).format('MMM D YYYY')
 
   return (
     <a href={`/notes/${note.id}`}>

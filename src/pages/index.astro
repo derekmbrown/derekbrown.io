@@ -25,6 +25,6 @@ allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
   </div>
 
   {allNotes.slice(0, 5).map((note) =>
-    <NoteItem client:load note={note} />
+    <NoteItem note={note} />
   )}
 </Main>
