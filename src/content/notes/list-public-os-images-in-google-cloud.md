@@ -8,4 +8,7 @@ A command to print the public OS images in Google Cloud using the GCP CLI.
 
 ```bash
 gcloud compute images list
+
+# List URIs
+gcloud compute images list --uri
 ```
