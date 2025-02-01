@@ -1,4 +1,3 @@
-import React from 'react'
 export default function TagItem({ tag }) {
   return (
     <a href={`/tags/${tag}`}>

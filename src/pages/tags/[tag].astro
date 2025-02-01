@@ -1,7 +1,7 @@
 ---
 import Main from '../../layouts/Main.astro'
 import { getCollection } from 'astro:content'
-import FeedItem from '../../components/ui/FeedItem'
+import NoteItem from '../../components/ui/NoteItem'
 
 export async function getStaticPaths() {
   const allNotes = await getCollection('notes')
@@ -30,6 +30,6 @@ const title = `Tag: ${tag}`
 >
   <div class="mb-6 text-xl">{filteredNotes.length} notes tagged with <span class="font-bold">{tag}</span>:</div>
   {filteredNotes.map((note) =>
-    <FeedItem client:load note={note} />
+    <NoteItem client:load note={note} />
   )}
 </Main>

@@ -1,7 +1,7 @@
 ---
 import Main from '../layouts/Main.astro'
 import { getCollection } from 'astro:content'
-import FeedItem from '../components/ui/FeedItem'
+import NoteItem from '../components/ui/NoteItem'
 
 const allNotes = await getCollection('notes')
 allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
@@ -25,6 +25,6 @@ allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
   </div>
 
   {allNotes.slice(0, 5).map((note) =>
-    <FeedItem client:load note={note} />
+    <NoteItem client:load note={note} />
   )}
 </Main>
