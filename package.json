@@ -14,13 +14,13 @@
     "@astrojs/react": "^4.2.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.5",
     "@fontsource-variable/inter": "^5.1.1",
     "@fontsource-variable/manrope": "^5.1.1",
     "@fontsource-variable/montserrat": "^5.1.1",
     "@fontsource/fira-code": "^5.1.1",
     "@fontsource/merriweather": "^5.1.1",
     "@iconify-json/mdi": "^1.2.3",
+    "@tailwindcss/vite": "^4.0.3",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "astro": "^5.1.10",
@@ -31,6 +31,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark-code-titles": "^0.1.2",
-    "remark-custom-heading-id": "^2.0.0"
+    "remark-custom-heading-id": "^2.0.0",
+    "tailwindcss": "^4.0.3"
   }
 }
