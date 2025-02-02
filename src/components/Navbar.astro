@@ -5,7 +5,7 @@ import NavAstro from './Nav.astro'
 const { PageName } = Astro.props
 ---
 
-<NavReact>
+<NavReact client:load>
   <NavAstro slot="nav"/>
 </NavReact>
 
