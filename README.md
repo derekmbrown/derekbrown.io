@@ -11,5 +11,6 @@ This repository contains my personal website.
 - Infrastructure configured using [AWS CDK in Typescript](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html).
 - Deployment pipeline setup in [GitHub Actions](https://docs.github.com/en/actions).
 - Icons from [Iconify](https://icon-sets.iconify.design/) and integrated with [Astro Icon](https://www.astroicon.dev/getting-started/).
+- Fonts from [Fontsource](https://fontsource.org/docs/getting-started/introduction).
 
 Launch date: 02-01-2024.
