@@ -1,14 +1,29 @@
 ---
-import Emoji from 'astro-emoji'
+import Nav from './ui/Nav'
+import NavAstro from './Nav.astro'
+
+const { PageName } = Astro.props
 ---
 
-<nav class="flex flex-col mt-12 mb-10 text-[#F2F5F7]">
-  <div class="flex font-['Merriweather'] text-4xl font-black mb-3">
-    <a href="/">Derek Brown <Emoji symbol="👨🏻‍💻" label="person" /></a>
-  </div>
-  <div class="font-['Merriweather'] text-xl flex items-center gap-4">
-    <span class="navItem" id="notes"><a href="/">Notes</a></span>
-    <span class="navItem" id="tags"><a href="/tags">Tags</a></span>
-    <span class="navItem" id="about"><a href="/about">About</a></span>
-  </div>
-</nav>
+<Nav>
+  <NavAstro slot="nav"/>
+</Nav>
+
+<script define:vars={{ PageName }} is:inline>
+
+  switch (PageName) {
+    case 'Home':
+    case 'Note':
+    case 'Notes':
+      document.getElementById('notes').classList.add('active')
+      break;
+    case 'Tag':
+    case 'Tags':
+      document.getElementById('tags').classList.add('active')
+      break;
+    case 'About':
+      document.getElementById('about').classList.add('active')
+      break;
+  }
+
+</script>
