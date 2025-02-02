@@ -1,13 +1,13 @@
 ---
-import Nav from './ui/Nav'
+import NavReact from './ui/Nav'
 import NavAstro from './Nav.astro'
 
 const { PageName } = Astro.props
 ---
 
-<Nav>
+<NavReact>
   <NavAstro slot="nav"/>
-</Nav>
+</NavReact>
 
 <script define:vars={{ PageName }} is:inline>
 
