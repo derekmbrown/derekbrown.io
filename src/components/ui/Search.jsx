@@ -33,7 +33,7 @@ export default function Search({ searchList }) {
           class="px-4 py-4"
         />
       </div>
-      {query.length > 1 && (
+      {query.length >= 1 && (
         <div class="my-5 text-lg">
           <div>{notes.length} {notes.length === 1 ? 'note' : 'notes'} found with <span class="font-bold">{query}</span>:
           </div>
