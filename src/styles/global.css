@@ -7,15 +7,15 @@ html, body {
 }
 
 .navItem {
-  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 .navItem:hover {
-  border: 1px solid;
+  border-bottom: 2px solid;
   transition: 0.8s;
   cursor: pointer;
 }
 
 .active {
-  border: 1px solid;
+  border-bottom: 2px solid;
 }
