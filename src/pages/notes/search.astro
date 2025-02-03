@@ -1,7 +1,7 @@
 ---
-import Main from '../layouts/Main.astro'
+import Main from '../../layouts/Main.astro'
 import { getCollection } from 'astro:content'
-import SearchBar from '../components/SearchBar.astro'
+import SearchBar from '../../components/SearchBar.astro'
 
 const allNotes = await getCollection('notes')
 allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
