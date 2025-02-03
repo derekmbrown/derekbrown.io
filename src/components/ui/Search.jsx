@@ -31,7 +31,7 @@ export default function Search({ searchList }) {
           value={query} 
           onChange={handleOnSearch} 
           placeholder="Search notes" 
-          class="px-4 py-3"
+          class="px-4 py-4"
         />
       </div>
       {query.length > 1 && (
