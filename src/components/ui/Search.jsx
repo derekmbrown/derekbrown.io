@@ -39,12 +39,10 @@ export default function Search({ searchList }) {
           <div>Found {notes.length} {notes.length === 1 ? 'result' : 'results'} for '{query}'</div>
         </div>
       )}
-      <ul>
-        {notes &&
-          notes.map((note) => (
-            <NoteItem note={note} />
-          ))}
-      </ul>
+      {notes &&
+        notes.map((note) => (
+          <NoteItem note={note} />
+        ))}
     </>
   )
 }
