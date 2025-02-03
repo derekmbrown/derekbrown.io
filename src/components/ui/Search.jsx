@@ -16,7 +16,6 @@ export default function Search({ searchList }) {
   const notes = fuse
     .search(query)
     .map((result) => result.item)
-    .slice(0, 5)
 
   function handleOnSearch({ target = {} }) {
     const { value } = target
