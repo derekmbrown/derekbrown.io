@@ -25,7 +25,7 @@ export default function Search({ searchList }) {
 
   return (
     <>
-      <div class="flex flex-col bg-[#1E262F] rounded-lg">
+      <div class="flex flex-col bg-[#1E262F] rounded-lg text-lg">
         <input 
           type="text" 
           value={query} 
