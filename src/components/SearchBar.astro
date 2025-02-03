@@ -1,0 +1,8 @@
+---
+import Search from './ui/Search'
+import { getCollection } from 'astro:content'
+
+const allNotes = await getCollection('notes')
+---
+
+<Search client:load searchList={allNotes} />

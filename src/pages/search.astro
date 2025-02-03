@@ -1,0 +1,19 @@
+---
+import Main from '../layouts/Main.astro'
+import { getCollection } from 'astro:content'
+import SearchBar from '../components/SearchBar.astro'
+
+const allNotes = await getCollection('notes')
+allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
+---
+
+<Main 
+  PageName="Home"
+  TabTitle="Home",
+  MetaTitle="Derek Brown", 
+  MetaDescription="Developer profile, portfolio and website of Derek Brown.", 
+  MetaTag="website", 
+  MetaUrl="https://derekbrown.io"
+>
+  <SearchBar />
+</Main>
