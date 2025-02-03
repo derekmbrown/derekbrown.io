@@ -35,8 +35,9 @@ export default function Search({ searchList }) {
         />
       </div>
       {query.length > 1 && (
-        <div class="my-5">
-          <div>Found {notes.length} {notes.length === 1 ? 'result' : 'results'} for '{query}'</div>
+        <div class="my-5 text-lg">
+          <div>{notes.length} {notes.length === 1 ? 'note' : 'notes'} found with <span class="font-bold">{query}</span>:
+          </div>
         </div>
       )}
       {notes &&
