@@ -25,13 +25,13 @@ export default function Search({ searchList }) {
 
   return (
     <>
-      <div class="flex flex-col">
+      <div class="flex flex-col bg-[#1E262F] rounded-lg">
         <input 
           type="text" 
           value={query} 
           onChange={handleOnSearch} 
           placeholder="Search notes" 
-          class="px-2 py-2"
+          class="px-3 py-3"
         />
       </div>
       {query.length > 1 && (
