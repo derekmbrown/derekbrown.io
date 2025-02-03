@@ -5,6 +5,7 @@ function handler(event) {
   if (uri.endsWith('/')) { request.uri = '/index.html' }
   if (uri.endsWith('/about')) { request.uri = '/about/index.html' }
   if (uri.endsWith('/tags')) { request.uri = '/tags/index.html' }
+  if (uri.endsWith('/search')) { request.uri = '/search/index.html' }
 
   var pathNames = uri.split('/')
   if (pathNames.length > 2 && (pathNames[1] == 'notes' || pathNames[1] == 'tags')) {
