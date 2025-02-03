@@ -8,7 +8,6 @@ html, body {
 
 .navItem {
   border-bottom: 2px solid transparent;
-  padding: 0;
 }
 
 .navItem:hover {
@@ -18,5 +17,5 @@ html, body {
 }
 
 .active {
-  border-bottom: 2px solid;
+  border-bottom: 3px solid;
 }
