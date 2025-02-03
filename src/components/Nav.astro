@@ -1,5 +1,6 @@
 ---
 import Emoji from 'astro-emoji'
+import { Icon } from 'astro-icon/components'
 ---
 
 <nav class="flex flex-col mt-12 mb-10 text-[#F2F5F7]">
@@ -10,5 +11,8 @@ import Emoji from 'astro-emoji'
     <span class="navItem" id="notes"><a href="/">Notes</a></span>
     <span class="navItem" id="tags"><a href="/tags">Tags</a></span>
     <span class="navItem" id="about"><a href="/about">About</a></span>
+    <span class="navItem" id="search">
+      <a href="/search"><Icon name="mdi:search" width="30" height="27"/></a>
+    </span>
   </div>
 </nav>
