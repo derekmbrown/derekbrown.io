@@ -37,12 +37,12 @@ tags.sort()
   <div class="flex flex-col mb-8">
     <div class="flex mb-5">
       {tags.map(tag => (
-        <div class="bg-[#1E262F] px-3 py-2 mr-3 rounded-lg text-sm">
-          <a href={`/tags/${tag}`}>
-            {tag}
-          </a>
-        </div>
-        ))}
+        <a href={`/tags/${tag}`}>
+          <div class="bg-[#1E262F] px-3 py-2 mr-2 rounded-lg text-sm">
+              {tag}
+          </div>
+        </a>
+      ))}
     </div>
     <span class="text-5xl mb-4 font-bold">{title}</span>
     <div class="flex flex-wrap">
