@@ -1,6 +1,7 @@
 ---
 import Main from './Main.astro'
 import moment from 'moment'
+import { Icon } from 'astro-icon/components'
 
 const { frontmatter } = Astro.props
 const { title, pubDate, tags, dek, url } = frontmatter
@@ -45,8 +46,8 @@ tags.sort()
     </div>
     <span class="text-5xl mb-4 font-bold">{title}</span>
     <div class="flex flex-wrap">
-      <span class="text-[#7E8C9A] text-lg">
-        Published: {publishedDate}
+      <span class="text-[#7E8C9A] text-lg flex items-center gap-2">
+        <Icon name="mdi:calendar-month" width="30" height="30"/> {publishedDate}
       </span>
     </div>
   </div>
