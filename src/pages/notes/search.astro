@@ -1,6 +1,10 @@
 ---
 import Main from '../../layouts/Main.astro'
-import SearchBar from '../../components/SearchBar.astro'
+// import SearchBar from '../../components/SearchBar.astro'
+import SearchBar from '../../components/ui/Search'
+import { getCollection } from 'astro:content'
+
+const allNotes = await getCollection('notes')
 ---
 
 <Main 
@@ -11,5 +15,5 @@ import SearchBar from '../../components/SearchBar.astro'
   MetaTag="website", 
   MetaUrl="https://derekbrown.io"
 >
-  <SearchBar />
+  <SearchBar client:load  searchList={allNotes} />
 </Main>
