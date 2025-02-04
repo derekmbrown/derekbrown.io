@@ -5,7 +5,7 @@ const noteCollection = defineCollection({
   loader: glob({ pattern: '**/*.(md|mdx)', base: './src/content/notes' }),
   schema: z.object({
     title: z.string(),
-    pubDate: z.datetime(),
+    pubDate: z.string(),
     tags: z.array(z.string()),
   })
 })
