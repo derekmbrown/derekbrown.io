@@ -8,17 +8,17 @@ import { Icon } from 'astro-icon/components'
     <a href="/">Derek Brown <Emoji symbol="👨🏻‍💻" label="person" /></a>
   </div>
   <div class="text-lg flex items-center gap-2.5">
-    <span class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="notes">
-      <a href="/">Notes</a>
-    </span>
-    <span class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="tags">
-      <a href="/tags">Tags</a>
-    </span>
-    <span class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="about">
-      <a href="/about">About</a>
-    </span>
-    <span class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="search">
-      <a href="/notes/search"><Icon name="mdi:search" width="25" height="27"/></a>
-    </span>
+    <a href="/" class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="notes">
+        Notes
+    </a>
+    <a href="/tags" class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="tags">
+        Tags
+    </a>
+    <a href="/about" class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="about">
+        About
+    </a>
+    <a href="/notes/search" class="navItem bg-[#1E262F] px-3.5 py-2 rounded-lg" id="search">
+        <Icon name="mdi:search" width="25" height="27"/>
+    </a>
   </div>
 </nav>
