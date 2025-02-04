@@ -41,7 +41,7 @@ export default function Search({ searchList }) {
       )}
       {notes &&
         notes.map((note) => (
-          <NoteItem note={note} />
+          <NoteItem client:load note={note} />
         ))}
     </>
   )
