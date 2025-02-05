@@ -1,5 +1,5 @@
 ---
-title: 'Reset Sidebar Views In VS Code'
+title: 'Reset Sidebar Views In VSCode'
 pubDate: 08-14-2024
 tags: ['note', 'vscode']
 ---
