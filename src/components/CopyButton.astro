@@ -12,9 +12,12 @@ import { Icon } from "astro-icon/components"
 <script>
   const copyButton = document.getElementById("copyButton")
   copyButton.addEventListener("click", () => {
-    var code = ''
-    document.querySelectorAll("pre code .line").forEach((span) => {
-      code += `${span.textContent}\n`
+    var code = ""
+    document.querySelectorAll("pre code .line").forEach((span, index) => {
+      code += span.textContent
+      if (index == (document.querySelectorAll("pre code span").length - 1)) {
+        code += "\n"
+      }
     })
     navigator.clipboard.writeText(code)
     const copyButtonLabel = document.getElementById("copyButtonLabel")
