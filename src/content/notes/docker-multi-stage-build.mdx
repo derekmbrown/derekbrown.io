@@ -4,6 +4,8 @@ pubDate: 02-24-2024
 tags: ['note', 'docker', 'snippet']
 ---
 
+import CopyButton from '../../components/CopyButton.astro'
+
 Here's an example how to setup a multi-stage build in Docker.
 
 ```docker
@@ -29,3 +31,5 @@ COPY --from=builder /app/vendor /var/www/html/vendor
 # 7. Start Apache service
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 ```
+
+<CopyButton />

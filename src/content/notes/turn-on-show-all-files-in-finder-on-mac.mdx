@@ -4,8 +4,12 @@ pubDate: 02-04-2025
 tags: ['note', 'macos', 'terminal']
 ---
 
+import CopyButton from '../../components/CopyButton.astro'
+
 Here's a command that will turn on show all files in Finder on Mac.
 
 ```bash
 defaults write com.apple.Finder AppleShowAllFiles true && killall Finder
 ```
+
+<CopyButton />

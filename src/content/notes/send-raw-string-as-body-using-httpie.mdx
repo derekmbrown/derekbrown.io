@@ -4,8 +4,12 @@ pubDate: 10-29-2024
 tags: ['note', 'terminal', httpie]
 ---
 
+import CopyButton from '../../components/CopyButton.astro'
+
 Found this cool feature about [HTTPie](https://httpie.io/), `echo` a string and pipe it to HTTPie to send it as the body of a POST request.
 
 ```bash
 echo '{"name":"Derek"}' | http POST https://example.com
 ```
+
+<CopyButton />

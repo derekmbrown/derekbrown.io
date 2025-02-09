@@ -4,11 +4,12 @@ pubDate: 02-01-2025
 tags: ['note', 'gcp', 'cli']
 ---
 
+import CopyButton from '../../components/CopyButton.astro'
+
 A command to list the available OS images in Google Cloud using the gcloud CLI.
 
 ```bash
 gcloud compute images list
-
-# List URIs
-gcloud compute images list --uri
 ```
+
+<CopyButton />
