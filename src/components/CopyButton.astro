@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div>
+  <button id='copyButton' class="bg-[#1E262F] rounded-lg px-4 py-2 flex gap-2 hover:cursor-pointer">
+    <span id="copyButtonLabel">Copy</span>
+    <Icon id="copyButtonIcon" name="mdi:clipboard-multiple-outline" width="22" height="30"/>
+  </button>
+</div>
+
+<script>
+  const copyButton = document.getElementById("copyButton")
+  copyButton.addEventListener("click", () => {
+    var text = document.querySelectorAll('code span span')[0].innerHTML
+    navigator.clipboard.writeText(text)
+    const copyButtonLabel = document.getElementById("copyButtonLabel")
+    copyButtonLabel.innerHTML = 'Copied!'
+    setTimeout(() => { 
+      copyButtonLabel.innerHTML = 'Copy'
+    }, 1000)
+  })
+</script>
