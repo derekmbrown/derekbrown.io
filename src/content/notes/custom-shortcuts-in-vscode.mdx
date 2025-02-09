@@ -4,11 +4,13 @@ pubDate: 11-20-2024
 tags: ['note', 'vscode']
 ---
 
+import CopyButton from '../../components/CopyButton.astro'
+
 A running list of my custom shortcuts in VSCode.
 
 To access this json file, open the Command Palette (`CMD+SHIFT+P`) and search for "Open Keyboard Shortcuts (JSON)". A `keybindings.json` file should open.
 
-```json:keybindings.json
+```json
 [
   {
     "key": "shift+cmd+a",
@@ -29,6 +31,8 @@ To access this json file, open the Command Palette (`CMD+SHIFT+P`) and search fo
   {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
-  },
+  }
 ]
 ```
+
+<CopyButton />
