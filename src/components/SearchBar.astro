@@ -3,6 +3,7 @@ import Search from './ui/Search'
 import { getCollection } from 'astro:content'
 
 const allNotes = await getCollection('notes')
+allNotes.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
 ---
 
 <Search client:load searchList={allNotes} />

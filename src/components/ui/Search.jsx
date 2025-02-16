@@ -9,7 +9,8 @@ export default function Search({ searchList }) {
     keys: ['data.title'],
     includeMatches: true,
     minMatchCharLength: 2,
-    threshold: 0.5
+    threshold: 0.5,
+    sortFn: () => {},
   }
   const fuse = new Fuse(searchList, options)
 
