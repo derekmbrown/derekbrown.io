@@ -12,5 +12,7 @@ This repository contains my personal website.
 - Deployment pipeline setup in [GitHub Actions](https://docs.github.com/en/actions).
 - Icons from [Iconify](https://icon-sets.iconify.design/) and integrated with [Astro Icon](https://www.astroicon.dev/getting-started/).
 - Fonts from [Fontsource](https://fontsource.org/docs/getting-started/introduction).
+- Search functionality built with [Fuse.js](https://www.fusejs.io/getting-started/installation.html).
+- Realtime analytics added using [Google Analytics 4](https://support.google.com/analytics/answer/9304153?sjid=9547112555318664918-NA).
 
 Launch date: 02-01-2024.
