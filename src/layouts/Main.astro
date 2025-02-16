@@ -1,5 +1,6 @@
 ---
 import Head from './Head.astro'
+import GoogleAnalytics from './GoogleAnalytics.astro'
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
 
@@ -8,6 +9,7 @@ const { PageName, TabTitle, MetaTitle, MetaDescription, MetaTag, MetaUrl } = Ast
 
 <html lang="en">
   <Head {TabTitle} {MetaTitle} {MetaDescription} {MetaTag} {MetaUrl} />
+  <GoogleAnalytics />
   <body>
     <div class="flex flex-col container mx-auto max-w-2xl h-screen px-7">
       <Navbar {PageName} />
