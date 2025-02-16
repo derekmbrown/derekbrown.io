@@ -31,5 +31,3 @@ COPY --from=builder /app/vendor /var/www/html/vendor
 # 7. Start Apache service
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 ```
-
-<CopyButton />
