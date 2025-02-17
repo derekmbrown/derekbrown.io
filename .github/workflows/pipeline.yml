@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@main
 
     - name: Install node packages
-      run: npm i
+      run: make reset_astro
 
     - name: Authenticate AWS
       uses: aws-actions/configure-aws-credentials@v4
@@ -29,17 +29,13 @@ jobs:
         aws-region: 'us-east-1'
 
     - name: Build website
-      run: npm run build
+      run: make build
 
     - name: Upload website
-      run: aws s3 sync ./dist s3://derekbrown.io
+      run: make sync
 
     - name: Purge website
-      run: |
-        aws cloudfront create-invalidation \
-        --distribution-id ${{ secrets.AWS_CLOUDFRONT_DIST_ID }} \
-        --paths '/*' \
-        --no-cli-pager
+      run: make purge
 
     - name: Wait 30 seconds
       run: sleep 30
