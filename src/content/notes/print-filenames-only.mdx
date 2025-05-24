@@ -1,0 +1,18 @@
+---
+title: 'Print Filesnames Only'
+pubDate: 05-24-2025
+tags: ['note', 'macos', 'linux', 'cli']
+---
+
+Few ways to print filesnames only.
+
+```bash
+# Using printf
+printf '%s\n' *
+
+# Using find with basename
+find . -type f -exec basename {} \;
+
+# Using find with sed
+find . -type f | sed 's/.*\///'
+```
