@@ -7,13 +7,13 @@ tags: ['cli', 'macos', 'linux', 'note']
 Some examples of using the sed command to find and replace text in a file.
 
 ```bash
-# Basic syntax
+# Replace all occurrences
 sed -i 's/old_text/new_text/g' filename.txt
 
-# Replace string on specific line number
+# Replace on specific line number
 sed '4 s/old_text/new_text/' filename.txt
 
-# Do a dry run of a string replacement
+# Do a dry run
 sed -n 's/old_text/new_text/p' filename.txt
 
 # Delete all blank lines
