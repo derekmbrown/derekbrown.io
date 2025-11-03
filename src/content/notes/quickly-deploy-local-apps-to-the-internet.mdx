@@ -1,0 +1,18 @@
+---
+title: 'Quickly Deploy Local Apps To The Internet'
+pubDate: 11-02-2025
+tags: ['note', 'terminal', 'cloudflare']
+---
+
+Here's a way to quickly deploy local applications to the internet using Cloudflare Tunnel, a command-line client that acts a tunnel daemon to the internet.
+
+```bash
+# 1. Install
+brew install cloudflare/cloudflare/cloudflared
+
+# 2. Start your app (Ex. Node app)
+npm run start
+
+# 3. Expose app to internet
+cloudflared tunnel --url http://localhost:<YOUR_PORT>
+```
