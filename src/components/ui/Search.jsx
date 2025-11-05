@@ -32,6 +32,7 @@ export default function Search({ searchList }) {
           onChange={handleOnSearch} 
           placeholder="Search notes" 
           class="px-4 py-3"
+          autoFocus
         />
       </div>
       {query.length >= 1 && (
