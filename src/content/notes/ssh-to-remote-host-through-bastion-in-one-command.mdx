@@ -7,11 +7,11 @@ tags: ['note', 'ssh']
 Neat command I found to SSH into a remote host through a bastion in one command. This is possible using ProxyJump or the `-J` flag.
 
 ```bash
-ssh -J <BASTION-IP> <REMOTE-IP>
+ssh -J <BASTION_IP> <REMOTE_IP>
 ```
 
 If the hosts differ between users and ports, you can specify them like this.
 
 ```bash
-ssh -J user@<BASTION-IP:PORT> user@<REMOTE-IP:PORT>
+ssh -J user@<BASTION_IP:PORT> user@<REMOTE_IP:PORT>
 ```
