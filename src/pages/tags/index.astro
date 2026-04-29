@@ -15,7 +15,7 @@ const tagsWithNotes = notes.reduce((allNotes, note) => {
     })
   }
   return allNotes
-}, {})
+}, {} as Record<string, typeof notes>)
 
 const tags = [...new Set(notes.map((note) => note.data.tags).flat())]
 tags.sort()
@@ -31,7 +31,7 @@ tags.sort()
 >
   <div class="flex flex-wrap gap-y-2.5">
     {tags.map(tag => (
-      <TagItem tag={tag} />
+      <TagItem tag={tag} count={tagsWithNotes[tag].length} />
     ))}
   </div>
 </Main>

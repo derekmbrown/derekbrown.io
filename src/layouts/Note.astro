@@ -34,9 +34,9 @@ tags.sort()
   MetaTag="article",
   MetaUrl={url}
 >
-  <div class="flex flex-col mb-8">
+  <div class="flex flex-col">
     <div class="flex mb-5">
-      {tags.map(tag => (
+      {tags.map((tag: string) => (
         <a href={`/tags/${tag}`}>
           <div class="bg-[#1E262F] px-3 py-2 mr-2.5 rounded-lg text-sm">
               {tag}
@@ -51,6 +51,7 @@ tags.sort()
       </span>
     </div>
   </div>
+  <hr class="border-t-2 border-[#1E262F] my-6" />
   <div class="content flex flex-col gap-4 text-lg">
     <slot />
   </div>
